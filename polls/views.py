@@ -45,10 +45,12 @@ def vote(request, question_id):
         # Redirect prevents 2 posts with back button
         return HttpResponseRedirect(reverse("polls:results", args= (question.id,)))
 
-
+"""
 def detail(request, question_id):
     try:
         question = Question.objects.get(pk=question_id)
     except Question.DoesNotExist:
         raise Http404("Question does not exist")
     return render(request, "polls/detail.html", {"question": question})
+    """
+
